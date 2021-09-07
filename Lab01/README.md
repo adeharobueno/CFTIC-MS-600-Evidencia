@@ -6,9 +6,9 @@
 
 
 
-![P1.1](\Ejercicio1\P1.1.JPG)
+![P1.1](Ejercicio1/P1.1.JPG)
 
-![P1.2](\Ejercicio1\P1.2.JPG)
+![P1.2](Ejercicio1\P1.2.JPG)
 
 ![P1.3](\Ejercicio1\P1.3.JPG)
 
