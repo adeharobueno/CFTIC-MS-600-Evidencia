@@ -46,7 +46,7 @@
 
 <img src="Ejercicio2/P2.9.JPG" alt="P2.9" style="zoom:200%;" />
 
-![P2.10](\Ejercicio2\P2.10.JPG)
+![P2.10](Ejercicio2/P2.10.JPG)
 
 
 
