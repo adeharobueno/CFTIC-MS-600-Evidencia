@@ -79,3 +79,35 @@
 ![P4.4](Ejercicio4/P4.4.JPG)
 
 ![P4.5](Ejercicio4/P4.5.JPG)
+
+
+
+## EJERCICIO 5
+
+
+
+![P5.1](Ejercicio5/P5.1.JPG)
+
+![P5.2](Ejercicio5/P5.2.JPG)
+
+![P5.3](Ejercicio5/P5.3.JPG)
+
+![P5.4](Ejercicio5/P5.4.JPG)
+
+![P5.5](Ejercicio5/P5.5.JPG)
+
+![P5.6](Ejercicio5/P5.6.JPG)
+
+## EJERCICIO 6
+
+
+
+![P6.1](Ejercicio6/P6.1.JPG)
+
+![P6.2](Ejercicio6/P6.2.JPG)
+
+![P6.3](Ejercicio6/P6.3.JPG)
+
+![P6.4](Ejercicio6/P6.4.JPG)
+
+![P6.5](Ejercicio6/P6.5.JPG)
