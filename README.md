@@ -3,7 +3,7 @@ MS-600 Building Applications and Solutions with Microsoft 365 Core Services
 | Lab 01 | (180 Min)                                                    |
 | ------ | ------------------------------------------------------------ |
 |        | 01-Student-lab-manual.md                                     |
-|        | [02-Exercise-1-Registering-an-application-in-Azure-Active-Directory.md](Lab01/Readme.md) |
+|        | [02-Exercise-1-Registering-an-application-in-Azure-Active-Directory.md](/Lab01/Readme.md) |
 |        | 03-Exercise-2-Implementing-authentication.md                 |
 |        | 04-Exercise-3-Implementing-application-that-supports-B2B.md  |
 |        | 05-Exercise-4-Configuring-permissions-to-consume-an-API.md   |
