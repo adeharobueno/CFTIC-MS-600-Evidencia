@@ -4,11 +4,11 @@ MS-600 Building Applications and Solutions with Microsoft 365 Core Services
 | ------ | ------------------------------------------------------------ |
 |        | 01-Student-lab-manual.md                                     |
 |        | [02-Exercise-1-Registering-an-application-in-Azure-Active-Directory.md](https://github.com/adeharobueno/MS-600-Evidencias/blob/master/Lab01/README.md) |
-|        | 03-Exercise-2-Implementing-authentication.md                 |
-|        | 04-Exercise-3-Implementing-application-that-supports-B2B.md  |
-|        | 05-Exercise-4-Configuring-permissions-to-consume-an-API.md   |
-|        | 06-Exercise-5-Implementing-authorization-to-consume-an-API.md |
-|        | 07-Exercise-6-Creating-a-service-to-access-Microsoft-Graph.md |
+|        | [03-Exercise-2-Implementing-authentication.md](https://github.com/adeharobueno/MS-600-Evidencias/blob/master/Lab01/README.md#ejercicio-2) |
+|        | [04-Exercise-3-Implementing-application-that-supports-B2B.md](https://github.com/adeharobueno/MS-600-Evidencias/blob/master/Lab01/README.md#ejercicio-3) |
+|        | [05-Exercise-4-Configuring-permissions-to-consume-an-API.md](https://github.com/adeharobueno/MS-600-Evidencias/blob/master/Lab01/README.md#ejercicio-4) |
+|        | [06-Exercise-5-Implementing-authorization-to-consume-an-API.md](https://github.com/adeharobueno/MS-600-Evidencias/blob/master/Lab01/README.md#ejercicio-5) |
+|        | [07-Exercise-6-Creating-a-service-to-access-Microsoft-Graph.md](https://github.com/adeharobueno/MS-600-Evidencias/blob/master/Lab01/README.md#ejercicio-6) |
 | Lab 02 | (240 Min)                                                    |
 |        | 01-Student-lab-manual.md                                     |
 |        | 02-Exercise-1-Using-query-parameters-when-querying-Microsoft-Graph-via-HTTP.md |
