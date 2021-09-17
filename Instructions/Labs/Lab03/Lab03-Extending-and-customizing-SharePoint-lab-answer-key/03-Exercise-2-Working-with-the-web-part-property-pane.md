@@ -1,4 +1,4 @@
-﻿# Exercise 2: Working with the web part property pane
+﻿﻿# Exercise 2: Working with the web part property pane
 
 ## Task 1: Create a new SPFx solution and web part
 
