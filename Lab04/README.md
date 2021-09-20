@@ -29,3 +29,9 @@
 ![P1.11](Ejercicio1/P1.11.JPG)
 
 ![P1.12](Ejercicio1/P1.12.JPG)
+
+
+
+
+
+## EJERCICIO 2
