@@ -316,7 +316,7 @@ Now let's update the project to include a task module that will enable the user 
     ```html
     <!DOCTYPE html>
     <html>
-
+    
     <head>
       <meta charset="UTF-8">
       <title>YouTube Video Selector</title>
@@ -332,7 +332,7 @@ Now let's update the project to include a task module that will enable the user 
         }
       </style>
     </head>
-
+    
     <body>
       <div id='app'>
         Loading...
@@ -343,7 +343,7 @@ Now let's update the project to include a task module that will enable the user 
         youTubePlayer.render(youTubePlayer.VideoSelectorTaskModule, document.getElementById('app'), {});
       </script>
     </body>
-
+    
     </html>
     ```
 
@@ -386,11 +386,11 @@ With the selector's page created and registered, the next step is to implement t
 
 
     export const VideoSelectorTaskModule = () => {
-
+    
       const [{ inTeams, theme, context }] = useTeams();
       const [entityId, setEntityId] = useState<string | undefined>();
       const [youTubeVideoId, setYouTubeVideoId] = useState<string | undefined>("VlEH4vtaxp4");
-
+    
       useEffect(() => {
         if (inTeams === true) {
           microsoftTeams.appInitialization.notifySuccess();
@@ -398,14 +398,14 @@ With the selector's page created and registered, the next step is to implement t
           setEntityId("Not in Microsoft Teams");
         }
       }, [inTeams]);
-
+    
       useEffect(() => {
         if (context) {
           setEntityId(context.entityId);
           setYouTubeVideoId(getQueryVariable("vid"));
         }
       }, [context]);
-
+    
       return (
       );
     };
@@ -454,12 +454,12 @@ With the selector's page created and registered, the next step is to implement t
       width: 350,
       height: 150
     };
-
+    
     const submitHandler = (err: string, result: string): void => {
       console.log(`Submit handler - err: ${err}`);
       setYouTubeVideoId(result);
     };
-
+    
     microsoftTeams.tasks.startTask(taskModuleInfo, submitHandler);
     ```
 
