@@ -2,13 +2,13 @@
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.8",
   "id": "b27d2710-17a2-11ec-afd6-c9aa25a25259",
-  "version": "3",
+  "version": "5",
   "packageName": "youtubeplayer",
   "developer": {
     "name": "Seetic",
-    "websiteUrl": "https://3ad2-81-38-210-189.ngrok.io",
-    "privacyUrl": "https://3ad2-81-38-210-189.ngrok.io/privacy.html",
-    "termsOfUseUrl": "https://3ad2-81-38-210-189.ngrok.io/tou.html"
+    "websiteUrl": "https://e65b-81-38-210-189.ngrok.io",
+    "privacyUrl": "https://e65b-81-38-210-189.ngrok.io/privacy.html",
+    "termsOfUseUrl": "https://e65b-81-38-210-189.ngrok.io/tou.html"
   },
   "name": {
     "short": "YouTube Player",
@@ -28,13 +28,33 @@
     {
       "entityId": "55054ea4-a360-4d08-a8d1-0c5ee522bfed",
       "name": "YouTube Player 1",
-      "contentUrl": "https://3ad2-81-38-210-189.ngrok.io/youTubePlayer1Tab/?name={loginHint}&tenant={tid}&theme={theme}",
+      "contentUrl": "https://e65b-81-38-210-189.ngrok.io/youTubePlayer1Tab/?name={loginHint}&tenant={tid}&theme={theme}",
       "scopes": [
         "personal"
       ]
     }
   ],
-  "bots": [],
+  "bots": [
+    {
+      "botId": "a6e561eb-bbbb-4ef8-a040-6426d30dfeec",
+      "scopes": [
+        "personal"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": [ "personal" ],
+          "commands": [
+            {
+              "title": "MentionMe",
+              "description": "Sends message with @mention of the sender"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "connectors": [],
   "composeExtensions": [],
   "permissions": [
@@ -42,7 +62,7 @@
     "messageTeamMembers"
   ],
   "validDomains": [
-    "3ad2-81-38-210-189.ngrok.io"
+    "e65b-81-38-210-189.ngrok.io"
   ],
   "showLoadingIndicator": false
 }

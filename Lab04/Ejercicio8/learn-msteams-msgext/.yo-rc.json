@@ -1,0 +1,9 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "Seetic"
+    },
+    "libraryName": "messagingExt",
+    "generator-version": "3.2.0"
+  }
+}

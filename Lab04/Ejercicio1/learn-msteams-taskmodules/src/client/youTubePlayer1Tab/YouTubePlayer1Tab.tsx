@@ -46,6 +46,33 @@ export const YouTubePlayer1Tab = () => {
           microsoftTeams.tasks.startTask(taskModuleInfo, submitHandler);
     };
 
+    const onChangeVideoAdaptiveCard = (): void => {
+
+        // load adaptive card
+         const adaptiveCard: any = require("./YouTubeSelectorCard.json");
+         const taskModuleInfo = {
+            title: "YouTube Video Selector",
+            card: adaptiveCard,
+            width: 350,
+            height: 250
+            };
+         // update card with current video ID
+         adaptiveCard.body.forEach((container: any) => {
+         if (container.type === "Container") {
+             container.items.forEach((item: any) => {
+             if (item.id && item.id === "youTubeVideoId") {
+                 item.value = youTubeVideoId;
+             }
+             });
+         }
+         }); 
+        const submitHandler = (err: string, result: any): void => {
+                 console.log(`Submit handler - err: ${err}`);
+                 setYouTubeVideoId(result.youTubeVideoId);
+                 };
+         
+         microsoftTeams.tasks.startTask(taskModuleInfo, submitHandler);
+         };
     useEffect(() => {
         if (inTeams === true) {
             microsoftTeams.appInitialization.notifySuccess();
@@ -78,6 +105,7 @@ export const YouTubePlayer1Tab = () => {
                         <div>
                             <Button content="Change Video ID" onClick={() => onChangeVideo()}></Button>
                             <Button content="Show Video" primary onClick={() => onShowVideo()}></Button>
+                            <Button content="Change Video ID (AdaptiveCard)" onClick={() => onChangeVideoAdaptiveCard()}></Button>
                         </div>
                     </div>
                 </Flex.Item>
@@ -87,6 +115,8 @@ export const YouTubePlayer1Tab = () => {
             </Flex>
         </Provider>
     );
+
+
 
       
     

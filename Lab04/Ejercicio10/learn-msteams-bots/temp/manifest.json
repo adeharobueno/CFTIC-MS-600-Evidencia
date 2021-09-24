@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.9",
+  "id": "cd469f37-3d69-4d34-9d2e-bdf154d36400",
+  "version": "1.0.1",
+  "packageName": "com.seetic.ejercicio10",
+  "developer": {
+    "name": "Seetic",
+    "websiteUrl": "https://www.seetic.com",
+    "privacyUrl": "https://www.seetic.com",
+    "termsOfUseUrl": "https://www.seetic.com"
+  },
+  "name": {
+    "short": "Conversational Bot",
+    "full": "Conversational Bot"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [],
+  "bots": [
+    {
+      "botId": "8bc669df-3839-4a43-b1c6-7be100b2029a",
+      "needsChannelSelector": true,
+      "isNotificationOnly": false,
+      "scopes": [
+        "team",
+        "personal"
+      ],
+      "commandLists": [
+        {
+          "scopes": [
+            "team",
+            "personal"
+          ],
+          "commands": [
+            {
+              "title": "Help",
+              "description": "Shows help information"
+            },
+
+            {
+              "title": "MentionMe",
+              "description": "Indica destinatario"
+            }           
+          ]
+        }
+      ]
+    }
+  ],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "4c2b-81-34-201-14.ngrok.io"
+  ],
+  "showLoadingIndicator": false
+}
