@@ -349,10 +349,10 @@ Our project will contain two helper classes used to simplify signing the user in
     ```typescript
     import { Client } from "@microsoft/microsoft-graph-client";
     import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
-
+    
     export class MsGraphHelper {
       private msGraphClient: Client;
-
+    
       constructor(private token: string) {
         this.msGraphClient = Client.init({
           authProvider: (cb) => {
@@ -360,18 +360,18 @@ Our project will contain two helper classes used to simplify signing the user in
           }
         });
       }
-
+    
       public async getCurrentUser(): Promise<MicrosoftGraph.User> {
         return await this.msGraphClient.api("me").get() as MicrosoftGraph.User;
       }
-
+    
       public async getMostRecentEmail(): Promise<MicrosoftGraph.Message> {
         const response = await this.msGraphClient.api("me/messages")
           .select("receivedDateTime,subject")
           .orderby("receivedDateTime desc")
           .top(1)
           .get()
-
+    
         return response.value[0] as MicrosoftGraph.Message;
       }
     }
@@ -616,29 +616,29 @@ Our project will contain two helper classes used to simplify signing the user in
       TurnContext
     } from "botbuilder";
     import { MainDialog } from "./dialogs/mainDialog";
-
+    
     export class DialogBot extends TeamsActivityHandler {
       public dialogState: any;
-
+    
       constructor(public conversationState: ConversationState, public userState: UserState, public dialog: MainDialog) {
         super();
-
+    
         this.conversationState = conversationState;
         this.userState = userState;
         this.dialog = dialog;
         this.dialogState = this.conversationState.createProperty('DialogState');
-
+    
         this.onMessage(async (context, next) => {
           // Run the Dialog with the new message Activity.
           await this.dialog.run(context, this.dialogState);
-
+    
           await next();
         });
       }
-
+    
       public async run(context: TurnContext) {
         await super.run(context);
-
+    
         // Save any state changes. The load happened during the execution of the Dialog.
         await this.conversationState.saveChanges(context, false);
         await this.userState.saveChanges(context, false);
@@ -662,14 +662,14 @@ Our project will contain two helper classes used to simplify signing the user in
       TurnContext
     } from "botbuilder";
     import { SsoOAuthHelper } from "./helpers/SsoOauthHelper";
-
+    
     export class SsoBot extends DialogBot {
       public _ssoOAuthHelper: SsoOAuthHelper;
-
+    
       constructor(conversationState: ConversationState, userState: UserState) {
         super(conversationState, userState, new MainDialog());
         this._ssoOAuthHelper = new SsoOAuthHelper(process.env.SSO_CONNECTION_NAME as string, conversationState);
-
+    
         this.onMembersAdded(async (context, next) => {
           const membersAdded = context.activity.membersAdded;
           if (membersAdded && membersAdded.length > 0) {
@@ -681,12 +681,12 @@ Our project will contain two helper classes used to simplify signing the user in
           }
           await next();
         });
-
+    
         this.onTokenResponseEvent(async (context) => {
           await this.dialog.run(context, this.dialogState);
         });
       }
-
+    
       public async handleTeamsSigninTokenExchange(context: TurnContext, query: SigninStateVerificationQuery): Promise<void> {
         if (await this._ssoOAuthHelper.shouldProcessTokenExchange(context)) {
           return;
@@ -694,7 +694,7 @@ Our project will contain two helper classes used to simplify signing the user in
           await this.dialog.run(context, this.dialogState);
         }
       }
-
+    
       public async handleTeamsSigninVerifyState(context: TurnContext, query: SigninStateVerificationQuery): Promise<void> {
         await this.dialog.run(context, this.dialogState);
       }

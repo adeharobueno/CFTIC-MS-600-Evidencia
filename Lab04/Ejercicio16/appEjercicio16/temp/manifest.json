@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.8",
+  "id": "7c31a080-2037-11ec-a536-d5ea7bb70f91",
+  "version": "0.0.1",
+  "packageName": "ejercicio16",
+  "developer": {
+    "name": "Seetic",
+    "websiteUrl": "https://1f7d-81-34-201-14.ngrok.io",
+    "privacyUrl": "https://1f7d-81-34-201-14.ngrok.io/privacy.html",
+    "termsOfUseUrl": "https://1f7d-81-34-201-14.ngrok.io/tou.html"
+  },
+  "name": {
+    "short": "appEjercicio16",
+    "full": "appEjercicio16"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [
+    {
+      "entityId": "dd0f4e61-0797-43e1-85b3-9b0526c17296",
+      "name": "Ejercico16Tab",
+      "contentUrl": "https://1f7d-81-34-201-14.ngrok.io/ejercico16Tab/?name={loginHint}&tenant={tid}&theme={theme}",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "1f7d-81-34-201-14.ngrok.io"
+  ],
+  "showLoadingIndicator": false
+}

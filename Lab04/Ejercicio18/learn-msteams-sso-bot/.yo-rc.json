@@ -1,0 +1,9 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "Seetic"
+    },
+    "libraryName": "learnMsteamsSsoBot",
+    "generator-version": "3.2.0"
+  }
+}
